@@ -58,7 +58,7 @@
   <Sequence DisplayName="Sequence1" sap:VirtualizedContainerService.HintSize="476,862" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ouu" />
-      <Variable x:TypeArguments="s:String[]" Name="fi" />
+      <Variable x:TypeArguments="s:String[]" Name="space" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -91,13 +91,13 @@
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[ouu]" />
     <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
-        <OutArgument x:TypeArguments="s:String[]">[fi]</OutArgument>
+        <OutArgument x:TypeArguments="s:String[]">[space]</OutArgument>
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="s:String[]">[ouu.Split(Environment.NewLine.ToArray,stringsplitoptions.RemoveEmptyEntries)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,300" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[fi]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,300" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[space]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
